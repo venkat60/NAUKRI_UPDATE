@@ -1,0 +1,26 @@
+{
+  "name": "playwrightautomation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "naukri:update": "node ./scripts/open-naukri.js",
+    "naukri:schedule": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File ./scripts/register-naukri-hourly-task.ps1",
+    "naukri:schedule:interactive": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File ./scripts/register-naukri-hourly-task.ps1 -LogonType Interactive",
+    "mysql:mcp": "node ./mcp/mysql-server.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.3.0"
+  },
+  "dependencies": {
+    "@cfworker/json-schema": "^4.1.1",
+    "@modelcontextprotocol/server": "^2.0.0-alpha.2",
+    "mysql2": "^3.20.0",
+    "zod": "^4.3.6"
+  }
+}
